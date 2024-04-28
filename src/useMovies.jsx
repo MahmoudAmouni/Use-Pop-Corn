@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { KEY } from "./App";
+
 
 export function useMovie(query) {
   const [movies, setMovies] = useState([]);
   const [isloading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-const KEY="e54562cb"
+
   useEffect(
     function () {
       const controller = new AbortController();
